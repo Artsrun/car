@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: url('https://live.staticflickr.com/65535/54209776621_fa2ffd1f41_h.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    background: rgba(255, 107, 107, 0.8);
+    padding: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+section {
+    margin: 20px auto;
+    padding: 15px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #ff6b6b;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.video-container, .panorama-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+}
+
+.video-container iframe,
+.panorama-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.funny-image {
+    max-width: 200px;
+    margin: 0 auto 10px;
+}
+
+.bank-info {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: monospace;
+    text-align: center;
+}
+
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Mobile Responsiveness */
+@media (min-width: 768px) {
+    section {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        width: 60%;
+    }
+
+    header {
+        font-size: 2.2rem;
+    }
+}
